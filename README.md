@@ -7,7 +7,7 @@ Python module for interacting with example LISA catalogs
 ## 1 - Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine,
-either for development and testing purposes or as an installed package.  For more information, see the documentation at https://tlittenberg.github.io/lisacattools.
+either for development and testing purposes or as an installed package.  For more information, see the documentation at https://lisa-analysis-center.github.io/lisacattools.
 
 ### 1.1 - Prerequisites
 
