@@ -1,6 +1,6 @@
 # lisacattools
 
-[![Doc badge](https://img.shields.io/badge/Docs-master-brightgreen)](https://tlittenberg.github.io/lisacattools)
+[![Doc badge](https://img.shields.io/badge/Docs-master-brightgreen)](https://lisa-analysis-center.github.io/lisacattools)
 
 Python module for interacting with example LISA catalogs
 
