@@ -44,30 +44,8 @@ class GWCatalogType:
     SOBBH = GWCatalogPlugin("lisacattools.plugins.sobbh", "SobbhCatalogs")
 
 
-class GWCatalog:
+class GWCatalog(ABC):
     """Interface for handling a GW catalog."""
-
-    @classmethod
-    def __subclasshook__(cls, subclass):
-        return (
-            hasattr(subclass, "name")
-            and callable(subclass.name)
-            and hasattr(subclass, "location")
-            and callable(subclass.location)
-            and hasattr(subclass, "get_detections")
-            and callable(subclass.get_detections)
-            and hasattr(subclass, "get_attr_detections")
-            and callable(subclass.get_attr_detections)
-            and hasattr(subclass, "get_median_source")
-            and callable(subclass.get_median_source)
-            and hasattr(subclass, "get_source_samples")
-            and callable(subclass.get_source_samples)
-            and hasattr(subclass, "get_attr_source_samples")
-            and callable(subclass.get_source_samples)
-            and hasattr(subclass, "describe_source_samples")
-            and callable(subclass.describe_source_samples)
-            or NotImplemented
-        )
 
     @property
     @abstractmethod
@@ -198,32 +176,6 @@ class GWCatalog:
 
 class GWCatalogs(ABC):
     """Interface fo handling time-evolving GW catalogs"""
-
-    @classmethod
-    def __subclasshook__(cls, subclass):
-        return (
-            hasattr(subclass, "metadata")
-            and callable(subclass.metadata)
-            and hasattr(subclass, "count")
-            and callable(subclass.count)
-            and hasattr(subclass, "files")
-            and callable(subclass.files)
-            and hasattr(subclass, "get_catalogs_name")
-            and callable(subclass.get_catalogs_name)
-            and hasattr(subclass, "get_first_catalog")
-            and callable(subclass.get_first_catalog)
-            and hasattr(subclass, "get_last_catalog")
-            and callable(subclass.get_last_catalog)
-            and hasattr(subclass, "get_catalog")
-            and callable(subclass.get_catalog)
-            and hasattr(subclass, "get_catalog_by")
-            and callable(subclass.get_catalog_by)
-            and hasattr(subclass, "get_lineage")
-            and callable(subclass.get_lineage)
-            and hasattr(subclass, "get_lineage_data")
-            and callable(subclass.get_lineage_data)
-            or NotImplemented
-        )
 
     @staticmethod
     def register(type: str, nodule_name: str, class_name: str):
