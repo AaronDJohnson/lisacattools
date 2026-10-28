@@ -40,6 +40,8 @@ class GWCatalogType:
 
     MBH = GWCatalogPlugin("lisacattools.plugins.mbh", "MbhCatalogs")
     UCB = GWCatalogPlugin("lisacattools.plugins.ucb", "UcbCatalogs")
+    EMRI = GWCatalogPlugin("lisacattools.plugins.emri", "EmriCatalogs")
+    SOBBH = GWCatalogPlugin("lisacattools.plugins.sobbh", "SobbhCatalogs")
 
 
 class GWCatalog:
